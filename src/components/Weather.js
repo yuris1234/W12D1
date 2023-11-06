@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react';
 import { toQueryString } from '../utils';
 // import * as Process from '../../process.env'
+
 const Weather = () => {
     // constructor(props) {
     //   super(props);
@@ -32,7 +33,7 @@ const Weather = () => {
       Also remember to restart your server (i.e., re-run "npm start") whenever
       you change your .env file. */
       const apiKey = process.env.REACT_APP_WEATHER_API;
-      debugger;
+      // debugger;
       const params = {
         lat: location.coords.latitude,
         lon: location.coords.longitude,
@@ -42,7 +43,7 @@ const Weather = () => {
       url += toQueryString(params);
 
       const res = await fetch(url);
-      console.log(res);
+      // console.log(res);
       if (res.ok) {
         const weather = await res.json();
         setWeather(weather);
