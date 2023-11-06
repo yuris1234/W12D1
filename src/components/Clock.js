@@ -18,24 +18,16 @@ const Clock = () => {
 
   useEffect(() => {
     const interval = setInterval(tick, 1000);
+    // debugger
 
-    return (
+    return () => {
       clearInterval(interval)
-    );
+    };
   }, [])
-  
-  // componentDidMount() {
-  //   this.interval = setInterval(this.tick, 1000);
-  // }
-  
-  // componentWillUnmount() {
-  //   console.log("Clearing Clock interval!")
-  //   clearInterval(this.interval);
-  // }
   
   const tick = () => {
     setTime(new Date());
-    // this.setState({ time: new Date() });
+
   }
 
 
